@@ -1,18 +1,34 @@
-## Getting Started
+# Desafio de POO: Banco Digital
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto é um desafio prático com o objetivo de reforçar o conhecimento em **Programação Orientada a Objetos (POO)** em Java. O cenário proposto é a modelagem de um banco digital, onde os pilares da POO são aplicados para criar uma solução coesa e escalável.
 
-## Folder Structure
+## Funcionalidades
 
-The workspace contains two folders by default, where:
+O projeto simula um sistema bancário básico com os seguintes componentes e funcionalidades, demonstrando os principais conceitos de POO:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+  - **Classes e Herança:** O sistema é estruturado em classes como `Cliente` e `Conta`. As contas são divididas em `ContaCorrente` e `ContaPoupanca`, que **herdam** as funcionalidades e atributos da classe base `Conta`.
+  - **Métodos de Operação:** As classes de conta possuem métodos essenciais como `depositar()`, `sacar()` e `transferir()`.
+  - **Encapsulamento:** Os dados sensíveis das contas (como o saldo) são protegidos e acessíveis apenas por meio de métodos públicos, garantindo a integridade da informação.
+  - **Polimorfismo:** A classe principal (`Main`) demonstra a capacidade de tratar diferentes tipos de conta (`ContaCorrente` e `ContaPoupanca`) de forma genérica, através de uma referência à classe `Conta`.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Pilares da POO Aplicados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+  - **Abstração:** Entidades do mundo real, como `Cliente` e `Conta`, foram modeladas como classes no código, focando apenas em seus atributos e comportamentos essenciais.
+  - **Encapsulamento:** Atributos como o `saldo` são privados, e as modificações são feitas exclusivamente por meio de métodos públicos como `depositar()` e `sacar()`.
+  - **Herança:** As classes `ContaCorrente` e `ContaPoupanca` herdam a estrutura e o comportamento da classe `Conta`, evitando a duplicação de código.
+  - **Polimorfismo:** É possível referenciar um objeto `ContaCorrente` ou `ContaPoupanca` como um objeto `Conta` e chamar seus métodos, permitindo um código mais flexível e reutilizável.
 
-## Dependency Management
+## Pré-requisitos
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Para executar este projeto, você precisa ter o ambiente de desenvolvimento Java (JDK) instalado em sua máquina.
+
+## Como Executar
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/dinarteefilho/banco-digital-poo-dio
+    ```
+2.  **Abra o projeto:**
+    Abra o projeto na sua IDE favorita (como Visual Studio Code, IntelliJ ou Eclipse).
+3.  **Execute a classe `Main`:**
+    Rode o método `main()` da classe `Main.Java` para ver a demonstração das funcionalidades do banco digital.
